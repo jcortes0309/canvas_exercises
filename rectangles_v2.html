@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Draw a rectangle inside a rectangle</title>
+    <style media="screen">
+      #the-canvas { border: 1px solid black }
+    </style>
+  </head>
+  <body>
+    <h1>THE CANVAS</h1>
+    <canvas id="the-canvas" width="300" height="300"></canvas>
+
+
+    <script>
+      var canvas = document.getElementById("the-canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "blue";
+      // fillRect(x, y, width, height)
+      ctx.fillRect(50, 50, 50, 150);
+
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(60, 60, 30, 130);
+    </script>
+  </body>
+</html>
