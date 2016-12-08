@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Draw a circle inside a circle</title>
+    <style media="screen">
+      #canvas { border: 5px solid black }
+    </style>
+  </head>
+  <body>
+    <h1>THE CANVAS</h1>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.fillStyle = "blue";
+      // ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlockwise)
+      ctx.ellipse(200, 200, 150, 150, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = "yellow"
+      ctx.ellipse(200, 200, 100, 100, 0, 0, Math.PI * 2);
+      ctx.fill();
+    </script>
+  </body>
+</html>
